@@ -76,20 +76,20 @@ function sortList() {
   const items = Array.from(list.children);
   items.sort((a, b) => {
     if (sortDirection == 1) {
-      sortIcon.src = "./icons/azalan.svg";
-      sortIcon.addEventListener("mousemove", () => {//butona hover
-        sortIcon.src = "./icons/azalan-hover.svg";
-      });
-      sortIcon.addEventListener("mouseout", () => {
-        sortIcon.src = "./icons/azalan.svg";
-      });
-    } else {
       sortIcon.src = "./icons/artan.svg";
-      sortIcon.addEventListener("mousemove", () => {
+      sortIcon.addEventListener("mousemove", () => {//butona hover
         sortIcon.src = "./icons/artan-hover.svg";
       });
       sortIcon.addEventListener("mouseout", () => {
         sortIcon.src = "./icons/artan.svg";
+      });
+    } else {
+      sortIcon.src = "./icons/azalan.svg";
+      sortIcon.addEventListener("mousemove", () => {
+        sortIcon.src = "./icons/azalan-hover.svg";
+      });
+      sortIcon.addEventListener("mouseout", () => {
+        sortIcon.src = "./icons/azalan.svg";
       });
     }
     const textA = a.querySelector("p").innerText.toLowerCase();
